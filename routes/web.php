@@ -4,7 +4,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CalculatorController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return response()->json([
+        'message' => 'Laravel PHPUnit Demo API',
+        'status' => 'OK',
+        'timestamp' => now()
+    ]);
+});
+
+Route::get('/health', function () {
+    return response()->json(['status' => 'healthy']);
 });
 
 Route::get('/add', [CalculatorController::class, 'add']);
