@@ -6,6 +6,6 @@
   <title>Laravel</title>
 </head>
 <body>
-  Welcome to Laravel!
+  Welcome to Laravel unit testing demo!
 </body>
 </html>
